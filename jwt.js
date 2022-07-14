@@ -14,10 +14,10 @@ const verifyToken = async (req, res, next) => {
         const search = await knex('learning').where({ id: varify })
         req.present = search
         next()
-
-    }else{
+    } else{
         res.send("token expired")
     }
+
 }
 
 
